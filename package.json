@@ -1,14 +1,16 @@
 {
-  "name": "xiv.filo.unitypackagetemplate",
+  "name": "xiv.filo.unitygridsystem2D",
   "version": "0.0.0",
-  "displayName": "Package Display Name",
-  "description": "Package Description.",
+  "displayName": "Unity Grid System 2D",
+  "description": "A 2D grid system that can be used in Unity Engine projects.",
   "unity": "",
   "unityRelease": "",
   "documentationUrl": "",
   "changelogUrl": "",
   "licensesUrl": "",
-  "dependencies": { },
+  "dependencies": {
+    "xiv.filo.xiv": "1.0.1"
+  },
   "keywords": [
     "XIV",
     "Unity"
