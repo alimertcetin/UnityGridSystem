@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/alimertcetin/UnityGridSystem/compare/v1.0.0...v1.0.1) (2025-07-31)
+
+
+### Bug Fixes
+
+* **documentation.yml:** update dotnet version to 8.x and remove "docfx init -q" ([a10cbad](https://github.com/alimertcetin/UnityGridSystem/commit/a10cbad2bd0cbe443f145eace6a338169ebcc56a))
+
 # 1.0.0 (2025-07-31)
 
 
