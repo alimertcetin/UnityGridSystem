@@ -1,3 +1,10 @@
+# 1.0.0 (2025-07-31)
+
+
+### Features
+
+* Initial commit ([51dec07](https://github.com/alimertcetin/UnityGridSystem/commit/51dec0718a77caa9b617f39fa7e31f437c20735f))
+
 ## [1.0.1](https://github.com/alimertcetin/UnityPackageTemplate/compare/v1.0.0...v1.0.1) (2023-11-04)
 
 
