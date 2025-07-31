@@ -1,7 +1,77 @@
 {
-  "source_base_path": "/home/runner/work/UnityPackageTemplate/UnityPackageTemplate/docfx_project",
+  "source_base_path": "/home/runner/work/UnityGridSystem/UnityGridSystem/docfx_project",
   "xrefmap": "xrefmap.yml",
   "files": [
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/XIV.GridSystems.CellData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XIV.GridSystems.CellData.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "XIV.GridSystems.CellData",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/XIV.GridSystems.Grid2D.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XIV.GridSystems.Grid2D.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "XIV.GridSystems.Grid2D",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/XIV.GridSystems.IGrid.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XIV.GridSystems.IGrid.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "XIV.GridSystems.IGrid",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/XIV.GridSystems.IGridListener.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XIV.GridSystems.IGridListener.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "XIV.GridSystems.IGridListener",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/XIV.GridSystems.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XIV.GridSystems.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "XIV.GridSystems",
+      "Summary": null
+    },
     {
       "type": "Conceptual",
       "source_relative_path": "api/index.md",
