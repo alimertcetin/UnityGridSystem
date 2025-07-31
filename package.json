@@ -1,0 +1,23 @@
+{
+  "name": "xiv.filo.unitypackagetemplate",
+  "version": "0.0.0",
+  "displayName": "Package Display Name",
+  "description": "Package Description.",
+  "unity": "",
+  "unityRelease": "",
+  "documentationUrl": "",
+  "changelogUrl": "",
+  "licensesUrl": "",
+  "dependencies": { },
+  "keywords": [
+    "XIV",
+    "Unity"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": {
+    "name": "Ali Mert Çetin",
+    "url": "https://alimertcetin.github.io/"
+  }
+}
