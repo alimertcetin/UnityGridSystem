@@ -132,18 +132,28 @@ references:
   isSpec: "True"
   fullName: XIV.GridSystems.Grid2D.CellCount
   nameWithType: Grid2D.CellCount
+- uid: XIV.GridSystems.Grid2D.CreateCellsNonAlloc(Vector3,Vector2,Vector2Int,Quaternion,System.Collections.Generic.List{XIV.GridSystems.CellData})
+  name: CreateCellsNonAlloc(Vector3, Vector2, Vector2Int, Quaternion, List<CellData>)
+  href: api/XIV.GridSystems.Grid2D.html#XIV_GridSystems_Grid2D_CreateCellsNonAlloc_Vector3_Vector2_Vector2Int_Quaternion_System_Collections_Generic_List_XIV_GridSystems_CellData__
+  commentId: M:XIV.GridSystems.Grid2D.CreateCellsNonAlloc(Vector3,Vector2,Vector2Int,Quaternion,System.Collections.Generic.List{XIV.GridSystems.CellData})
+  name.vb: CreateCellsNonAlloc(Vector3, Vector2, Vector2Int, Quaternion, List(Of CellData))
+  fullName: XIV.GridSystems.Grid2D.CreateCellsNonAlloc(Vector3, Vector2, Vector2Int, Quaternion, System.Collections.Generic.List<XIV.GridSystems.CellData>)
+  fullName.vb: XIV.GridSystems.Grid2D.CreateCellsNonAlloc(Vector3, Vector2, Vector2Int, Quaternion, System.Collections.Generic.List(Of XIV.GridSystems.CellData))
+  nameWithType: Grid2D.CreateCellsNonAlloc(Vector3, Vector2, Vector2Int, Quaternion, List<CellData>)
+  nameWithType.vb: Grid2D.CreateCellsNonAlloc(Vector3, Vector2, Vector2Int, Quaternion, List(Of CellData))
+- uid: XIV.GridSystems.Grid2D.CreateCellsNonAlloc*
+  name: CreateCellsNonAlloc
+  href: api/XIV.GridSystems.Grid2D.html#XIV_GridSystems_Grid2D_CreateCellsNonAlloc_
+  commentId: Overload:XIV.GridSystems.Grid2D.CreateCellsNonAlloc
+  isSpec: "True"
+  fullName: XIV.GridSystems.Grid2D.CreateCellsNonAlloc
+  nameWithType: Grid2D.CreateCellsNonAlloc
 - uid: XIV.GridSystems.Grid2D.GetCells
   name: GetCells()
   href: api/XIV.GridSystems.Grid2D.html#XIV_GridSystems_Grid2D_GetCells
   commentId: M:XIV.GridSystems.Grid2D.GetCells
   fullName: XIV.GridSystems.Grid2D.GetCells()
   nameWithType: Grid2D.GetCells()
-- uid: XIV.GridSystems.Grid2D.GetCells(Vector3,Vector2,Vector2Int,Quaternion)
-  name: GetCells(Vector3, Vector2, Vector2Int, Quaternion)
-  href: api/XIV.GridSystems.Grid2D.html#XIV_GridSystems_Grid2D_GetCells_Vector3_Vector2_Vector2Int_Quaternion_
-  commentId: M:XIV.GridSystems.Grid2D.GetCells(Vector3,Vector2,Vector2Int,Quaternion)
-  fullName: XIV.GridSystems.Grid2D.GetCells(Vector3, Vector2, Vector2Int, Quaternion)
-  nameWithType: Grid2D.GetCells(Vector3, Vector2, Vector2Int, Quaternion)
 - uid: XIV.GridSystems.Grid2D.GetCells*
   name: GetCells
   href: api/XIV.GridSystems.Grid2D.html#XIV_GridSystems_Grid2D_GetCells_
@@ -186,6 +196,22 @@ references:
   isSpec: "True"
   fullName: XIV.GridSystems.Grid2D.GetNeighbourIndices
   nameWithType: Grid2D.GetNeighbourIndices
+- uid: XIV.GridSystems.Grid2D.GetNeighbourIndicesNonAlloc(System.Int32,Vector2Int,System.Collections.Generic.IList{System.Int32})
+  name: GetNeighbourIndicesNonAlloc(int, Vector2Int, IList<int>)
+  href: api/XIV.GridSystems.Grid2D.html#XIV_GridSystems_Grid2D_GetNeighbourIndicesNonAlloc_System_Int32_Vector2Int_System_Collections_Generic_IList_System_Int32__
+  commentId: M:XIV.GridSystems.Grid2D.GetNeighbourIndicesNonAlloc(System.Int32,Vector2Int,System.Collections.Generic.IList{System.Int32})
+  name.vb: GetNeighbourIndicesNonAlloc(Integer, Vector2Int, IList(Of Integer))
+  fullName: XIV.GridSystems.Grid2D.GetNeighbourIndicesNonAlloc(int, Vector2Int, System.Collections.Generic.IList<int>)
+  fullName.vb: XIV.GridSystems.Grid2D.GetNeighbourIndicesNonAlloc(Integer, Vector2Int, System.Collections.Generic.IList(Of Integer))
+  nameWithType: Grid2D.GetNeighbourIndicesNonAlloc(int, Vector2Int, IList<int>)
+  nameWithType.vb: Grid2D.GetNeighbourIndicesNonAlloc(Integer, Vector2Int, IList(Of Integer))
+- uid: XIV.GridSystems.Grid2D.GetNeighbourIndicesNonAlloc*
+  name: GetNeighbourIndicesNonAlloc
+  href: api/XIV.GridSystems.Grid2D.html#XIV_GridSystems_Grid2D_GetNeighbourIndicesNonAlloc_
+  commentId: Overload:XIV.GridSystems.Grid2D.GetNeighbourIndicesNonAlloc
+  isSpec: "True"
+  fullName: XIV.GridSystems.Grid2D.GetNeighbourIndicesNonAlloc
+  nameWithType: Grid2D.GetNeighbourIndicesNonAlloc
 - uid: XIV.GridSystems.Grid2D.GridCenter
   name: GridCenter
   href: api/XIV.GridSystems.Grid2D.html#XIV_GridSystems_Grid2D_GridCenter

@@ -158,7 +158,7 @@ Class Grid2D  <a class="header-action link-secondary" title="View source" href="
 
   <h3 id="XIV_GridSystems_Grid2D__ctor_Vector3_Vector2_Vector2Int_Quaternion_" data-uid="XIV.GridSystems.Grid2D.#ctor(Vector3,Vector2,Vector2Int,Quaternion)">
   Grid2D(Vector3, Vector2, Vector2Int, Quaternion)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/alimertcetin/UnityGridSystem/blob/main/Runtime/Grid2D.cs/#L62"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/alimertcetin/UnityGridSystem/blob/main/Runtime/Grid2D.cs/#L61"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -358,7 +358,7 @@ Class Grid2D  <a class="header-action link-secondary" title="View source" href="
 
   <h3 id="XIV_GridSystems_Grid2D_AddListener_XIV_GridSystems_IGridListener_" data-uid="XIV.GridSystems.Grid2D.AddListener(XIV.GridSystems.IGridListener)">
   AddListener(IGridListener)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/alimertcetin/UnityGridSystem/blob/main/Runtime/Grid2D.cs/#L136"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/alimertcetin/UnityGridSystem/blob/main/Runtime/Grid2D.cs/#L96"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -385,11 +385,50 @@ Class Grid2D  <a class="header-action link-secondary" title="View source" href="
 
 
 
+  <a id="XIV_GridSystems_Grid2D_CreateCellsNonAlloc_" data-uid="XIV.GridSystems.Grid2D.CreateCellsNonAlloc*"></a>
+
+  <h3 id="XIV_GridSystems_Grid2D_CreateCellsNonAlloc_Vector3_Vector2_Vector2Int_Quaternion_System_Collections_Generic_List_XIV_GridSystems_CellData__" data-uid="XIV.GridSystems.Grid2D.CreateCellsNonAlloc(Vector3,Vector2,Vector2Int,Quaternion,System.Collections.Generic.List{XIV.GridSystems.CellData})">
+  CreateCellsNonAlloc(Vector3, Vector2, Vector2Int, Quaternion, List&lt;CellData&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/alimertcetin/UnityGridSystem/blob/main/Runtime/Grid2D.cs/#L161"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void CreateCellsNonAlloc(Vector3 gridCenter, Vector2 areaSize, Vector2Int cellCount, Quaternion orientation, List&lt;CellData&gt; buffer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>gridCenter</code> <span class="xref">Vector3</span></dt>
+    <dd></dd>
+    <dt><code>areaSize</code> <span class="xref">Vector2</span></dt>
+    <dd></dd>
+    <dt><code>cellCount</code> <span class="xref">Vector2Int</span></dt>
+    <dd></dd>
+    <dt><code>orientation</code> <span class="xref">Quaternion</span></dt>
+    <dd></dd>
+    <dt><code>buffer</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="XIV.GridSystems.CellData.html">CellData</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="XIV_GridSystems_Grid2D_GetCells_" data-uid="XIV.GridSystems.Grid2D.GetCells*"></a>
 
   <h3 id="XIV_GridSystems_Grid2D_GetCells" data-uid="XIV.GridSystems.Grid2D.GetCells">
   GetCells()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/alimertcetin/UnityGridSystem/blob/main/Runtime/Grid2D.cs/#L195"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/alimertcetin/UnityGridSystem/blob/main/Runtime/Grid2D.cs/#L159"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -416,53 +455,11 @@ Class Grid2D  <a class="header-action link-secondary" title="View source" href="
 
 
 
-  <a id="XIV_GridSystems_Grid2D_GetCells_" data-uid="XIV.GridSystems.Grid2D.GetCells*"></a>
-
-  <h3 id="XIV_GridSystems_Grid2D_GetCells_Vector3_Vector2_Vector2Int_Quaternion_" data-uid="XIV.GridSystems.Grid2D.GetCells(Vector3,Vector2,Vector2Int,Quaternion)">
-  GetCells(Vector3, Vector2, Vector2Int, Quaternion)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/alimertcetin/UnityGridSystem/blob/main/Runtime/Grid2D.cs/#L200"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IList&lt;CellData&gt; GetCells(Vector3 gridCenter, Vector2 areaSize, Vector2Int cellCount, Quaternion orientation)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>gridCenter</code> <span class="xref">Vector3</span></dt>
-    <dd></dd>
-    <dt><code>areaSize</code> <span class="xref">Vector2</span></dt>
-    <dd></dd>
-    <dt><code>cellCount</code> <span class="xref">Vector2Int</span></dt>
-    <dd></dd>
-    <dt><code>orientation</code> <span class="xref">Quaternion</span></dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="XIV.GridSystems.CellData.html">CellData</a>&gt;</dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
   <a id="XIV_GridSystems_Grid2D_GetIndexByWorldPos_" data-uid="XIV.GridSystems.Grid2D.GetIndexByWorldPos*"></a>
 
   <h3 id="XIV_GridSystems_Grid2D_GetIndexByWorldPos_Vector3_" data-uid="XIV.GridSystems.Grid2D.GetIndexByWorldPos(Vector3)">
   GetIndexByWorldPos(Vector3)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/alimertcetin/UnityGridSystem/blob/main/Runtime/Grid2D.cs/#L147"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/alimertcetin/UnityGridSystem/blob/main/Runtime/Grid2D.cs/#L107"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -498,14 +495,14 @@ Class Grid2D  <a class="header-action link-secondary" title="View source" href="
 
   <h3 id="XIV_GridSystems_Grid2D_GetNeighbourIndices_System_Int32_" data-uid="XIV.GridSystems.Grid2D.GetNeighbourIndices(System.Int32)">
   GetNeighbourIndices(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/alimertcetin/UnityGridSystem/blob/main/Runtime/Grid2D.cs/#L164"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/alimertcetin/UnityGridSystem/blob/main/Runtime/Grid2D.cs/#L124"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IList&lt;int&gt; GetNeighbourIndices(int centerIndex)</code></pre>
+    <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;int&gt; GetNeighbourIndices(int centerIndex)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -516,7 +513,7 @@ Class Grid2D  <a class="header-action link-secondary" title="View source" href="
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -534,14 +531,14 @@ Class Grid2D  <a class="header-action link-secondary" title="View source" href="
 
   <h3 id="XIV_GridSystems_Grid2D_GetNeighbourIndices_Vector3_" data-uid="XIV.GridSystems.Grid2D.GetNeighbourIndices(Vector3)">
   GetNeighbourIndices(Vector3)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/alimertcetin/UnityGridSystem/blob/main/Runtime/Grid2D.cs/#L189"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/alimertcetin/UnityGridSystem/blob/main/Runtime/Grid2D.cs/#L153"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IList&lt;int&gt; GetNeighbourIndices(Vector3 worldPos)</code></pre>
+    <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;int&gt; GetNeighbourIndices(Vector3 worldPos)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -552,9 +549,44 @@ Class Grid2D  <a class="header-action link-secondary" title="View source" href="
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
     <dd></dd>
   </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="XIV_GridSystems_Grid2D_GetNeighbourIndicesNonAlloc_" data-uid="XIV.GridSystems.Grid2D.GetNeighbourIndicesNonAlloc*"></a>
+
+  <h3 id="XIV_GridSystems_Grid2D_GetNeighbourIndicesNonAlloc_System_Int32_Vector2Int_System_Collections_Generic_IList_System_Int32__" data-uid="XIV.GridSystems.Grid2D.GetNeighbourIndicesNonAlloc(System.Int32,Vector2Int,System.Collections.Generic.IList{System.Int32})">
+  GetNeighbourIndicesNonAlloc(int, Vector2Int, IList&lt;int&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/alimertcetin/UnityGridSystem/blob/main/Runtime/Grid2D.cs/#L130"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void GetNeighbourIndicesNonAlloc(int centerIndex, Vector2Int cellCount, IList&lt;int&gt; neighbourIndicesBuffer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>centerIndex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>cellCount</code> <span class="xref">Vector2Int</span></dt>
+    <dd></dd>
+    <dt><code>neighbourIndicesBuffer</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
 
 
 
@@ -570,7 +602,7 @@ Class Grid2D  <a class="header-action link-secondary" title="View source" href="
 
   <h3 id="XIV_GridSystems_Grid2D_RebuildIfDirty" data-uid="XIV.GridSystems.Grid2D.RebuildIfDirty">
   RebuildIfDirty()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/alimertcetin/UnityGridSystem/blob/main/Runtime/Grid2D.cs/#L119"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/alimertcetin/UnityGridSystem/blob/main/Runtime/Grid2D.cs/#L78"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -596,7 +628,7 @@ Class Grid2D  <a class="header-action link-secondary" title="View source" href="
 
   <h3 id="XIV_GridSystems_Grid2D_RemoveListener_XIV_GridSystems_IGridListener_" data-uid="XIV.GridSystems.Grid2D.RemoveListener(XIV.GridSystems.IGridListener)">
   RemoveListener(IGridListener)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/alimertcetin/UnityGridSystem/blob/main/Runtime/Grid2D.cs/#L142"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/alimertcetin/UnityGridSystem/blob/main/Runtime/Grid2D.cs/#L102"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
