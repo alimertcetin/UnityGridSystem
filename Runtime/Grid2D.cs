@@ -55,9 +55,8 @@ namespace XIV.GridSystems
 
         readonly List<CellData> cellDatas;
         readonly List<IGridListener> gridListeners;
-        Vector2 CellSize => new Vector3(areaSize.x / cellCount.x, areaSize.y / cellCount.y);
+        Vector2 CellSize => new Vector2(areaSize.x / cellCount.x, areaSize.y / cellCount.y);
         static readonly List<int> neighbourIndicesBuffer = new List<int>(8);
-        static readonly List<CellData> cellDataBuffer = new List<CellData>(8);
 
         public Grid2D(Vector3 gridCenter, Vector2 areaSize, Vector2Int cellCount, Quaternion orientation)
         {
@@ -65,55 +64,15 @@ namespace XIV.GridSystems
             this.areaSize = areaSize;
             this.cellCount = cellCount;
             this.orientation = orientation;
-            int length = cellCount.y * cellCount.x;
+            int length = cellCount.x * cellCount.y;
             this.cellDatas = new List<CellData>(length);
             this.gridListeners = new List<IGridListener>(2);
             CreateCells();
         }
 
-        // void CreateCells()
-        // {
-        //     cellDatas.Clear();
-        //     int length = cellCount.y * cellCount.x;
-        //     for (int i = 0; i < length; i++)
-        //     {
-        //         this.cellDatas.Add();
-        //     }
-        //     var cellSize = CellSize;
-        //     var start = gridCenter - (Vector3)(areaSize * 0.5f) + (Vector3)(cellSize * 0.5f);
-        //     for (int x = 0; x < cellCount.x; x++)
-        //     {
-        //         for (int y = 0; y < cellCount.y; y++)
-        //         {
-        //             var pos = start + new Vector3(cellSize.x * x, cellSize.y * y, 0f);
-        //             int index = x * cellCount.y + y;
-        //             cellDatas[index] = new CellData(index, x, y, pos, cellSize);
-        //         }
-        //     }
-        // }
-
         void CreateCells()
         {
-            cellDatas.Clear();
-            int length = cellCount.y * cellCount.x;
-            for (int i = 0; i < length; i++)
-            {
-                this.cellDatas.Add(default);
-            }
-            var cellSize = CellSize;
-            var halfArea = new Vector2(areaSize.x * 0.5f, areaSize.y * 0.5f);
-            var originOffset = new Vector3(-halfArea.x + cellSize.x * 0.5f, -halfArea.y + cellSize.y * 0.5f, 0f);
-
-            for (int x = 0; x < cellCount.x; x++)
-            {
-                for (int y = 0; y < cellCount.y; y++)
-                {
-                    var localPos = new Vector3(cellSize.x * x, cellSize.y * y, 0f) + originOffset;
-                    var worldPos = gridCenter + orientation * localPos;
-                    int index = x * cellCount.y + y;
-                    cellDatas[index] = new CellData(index, x, y, worldPos, cellSize);
-                }
-            }
+            CreateCellsNonAlloc(gridCenter, areaSize, cellCount, orientation, cellDatas);
         }
 
         public void RebuildIfDirty()
@@ -127,7 +86,8 @@ namespace XIV.GridSystems
 
         void InformListeners()
         {
-            for (int i = 0; i < gridListeners.Count; i++)
+            var count = gridListeners.Count;
+            for (int i = 0; i < count; i++)
             {
                 gridListeners[i].OnGridChanged(this);
             }
@@ -160,8 +120,14 @@ namespace XIV.GridSystems
             int index = x * cellCount.y + y;
             return Mathf.Clamp(index, 0, cellDatas.Count - 1);
         }
+        
+        public IReadOnlyList<int> GetNeighbourIndices(int centerIndex)
+        {
+            GetNeighbourIndicesNonAlloc(centerIndex, cellCount, neighbourIndicesBuffer);
+            return neighbourIndicesBuffer.AsReadOnly();
+        }
 
-        public IList<int> GetNeighbourIndices(int centerIndex)
+        public static void GetNeighbourIndicesNonAlloc(int centerIndex, Vector2Int cellCount, IList<int> neighbourIndicesBuffer)
         {
             neighbourIndicesBuffer.Clear();
             int x = centerIndex / cellCount.y;
@@ -182,28 +148,30 @@ namespace XIV.GridSystems
                     neighbourIndicesBuffer.Add(neighborIndex);
                 }
             }
-
-            return neighbourIndicesBuffer;
         }
 
-        public IList<int> GetNeighbourIndices(Vector3 worldPos)
+        public IReadOnlyList<int> GetNeighbourIndices(Vector3 worldPos)
         {
             int centerIndex = GetIndexByWorldPos(worldPos);
             return GetNeighbourIndices(centerIndex);
         }
 
-        public IList<CellData> GetCells()
-        {
-            return GetCells(gridCenter, areaSize, cellCount, orientation);
-        }
+        public IList<CellData> GetCells() => cellDatas;
 
-        public static IList<CellData> GetCells(Vector3 gridCenter, Vector2 areaSize, Vector2Int cellCount, Quaternion orientation)
+        public static void CreateCellsNonAlloc(Vector3 gridCenter, Vector2 areaSize, Vector2Int cellCount, Quaternion orientation, List<CellData> buffer)
         {
-            cellDataBuffer.Clear();
+            int count = buffer.Count;
             int length = cellCount.y * cellCount.x;
-            for (int i = 0; i < length; i++)
+            int diff = length - count;
+            for (int i = 0; i < diff; i++)
             {
-                cellDataBuffer.Add(default);
+                buffer.Add(default);
+            }
+
+            if (diff < 0)
+            {
+                diff = -diff;
+                buffer.RemoveRange(count - diff - 1, diff);
             }
             var cellSize = new Vector3(areaSize.x / cellCount.x, areaSize.y / cellCount.y);
             var halfArea = new Vector2(areaSize.x * 0.5f, areaSize.y * 0.5f);
@@ -216,10 +184,9 @@ namespace XIV.GridSystems
                     var localPos = new Vector3(cellSize.x * x, cellSize.y * y, 0f) + originOffset;
                     var worldPos = gridCenter + orientation * localPos;
                     int index = x * cellCount.y + y;
-                    cellDataBuffer[index] = new CellData(index, x, y, worldPos, cellSize);
+                    buffer[index] = new CellData(index, x, y, worldPos, cellSize);
                 }
             }
-            return cellDataBuffer;
         }
     }
 }
